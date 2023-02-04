@@ -1,0 +1,75 @@
+.wd-tabs {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+a {
+    color: #6e767d;
+    text-decoration: none;
+}
+li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 16px;
+}
+.wd-account {
+    font-size: 13px;
+    padding-bottom: 6px;
+}
+.wd-mp-rb {
+    margin-right: 16px;
+    padding-bottom: 12px;
+}
+.wd-picture {
+    border-radius: 10%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+}
+.wd-picture img {
+    height: auto;
+    width: 100%;
+}
+.wd-explore-num-tuits {
+    color: #6e767d;
+    font-size: 13px;
+    padding-bottom: 12px;
+}
+.wd-explore-heading {
+    font-size: 18px;
+    padding-bottom: 6px;
+}
+.wd-explore-category {
+    color: #6e767d;
+    font-size: 13px;
+    padding-bottom: 6px;
+}
+.wd-search {
+    background-color: #2f3336;
+    border-radius: 30px;
+    border-width: 0;
+    float: left;
+    padding-left: 30px;
+    width: 50%;
+}
+.wd-search-box {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 16px;
+    margin-right: 12px;
+}
+.wd-search-box .wd-gear {
+    color: #1da1f2;
+    float: right;
+    font-size: 28px;
+    text-decoration: none;
+}
+.wd-selected {
+    border-bottom: solid #1da1f2 4px;
+    padding-bottom: 12px;
+}
+.wd-selected a {
+    color: #1da1f2;
+}

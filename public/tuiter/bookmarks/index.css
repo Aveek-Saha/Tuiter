@@ -1,0 +1,72 @@
+.wd-account {
+    font-size: 15px;
+}
+.wd-actions {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    width: 506px;
+}
+.wd-actions .wd-highlight {
+    color: red;
+}
+.wd-actions a {
+    color: lightgray;
+    text-decoration: none;
+}
+.wd-actions span {
+    padding-left: 12px;
+}
+.wd-avatar {
+    margin-left: 16px;
+}
+.wd-avatar img {
+    border-radius: 50%;
+    height: 48px;
+    overflow: hidden;
+    width: 48px;
+}
+.wd-bkm-ml {
+    margin-left: 12px;
+}
+.wd-handle {
+    color: lightgray;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+.wd-heading {
+    font-size: 20px;
+}
+.wd-link {
+    border-color: #6e767d;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    width: 504px;
+}
+.wd-link img {
+    border-bottom-style: solid;
+    border-color: lightgray;
+    border-radius: 20px 20px 0 0;
+    border-width: 1px;
+    height: 264px;
+    overflow: hidden;
+    width: 504px;
+}
+.wd-link-text {
+    font-size: 15px;
+    padding: 12px;
+}
+.wd-post {
+    font-size: 15px;
+    margin-bottom: 12px;
+    margin-right: 16px;
+    max-width: 506px;
+}
+.wd-subtext {
+    color: #6e767d;
+}
+.wd-width {
+    width: 598px;
+}
