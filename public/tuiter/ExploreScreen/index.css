@@ -1,0 +1,51 @@
+.no-border {
+    border: none;
+}
+
+.active-bold {
+    font-weight: 700;
+}
+
+.search {
+    background-color: rgb(240, 240, 240);
+    text-indent: 25px;
+}
+
+/* .settings {
+    color: black;
+} */
+
+/* ul .bg-grey {
+    background-color: rgb(184, 184, 184) !important;
+} */
+
+.tabs li a {
+    text-decoration: none;
+    color: black;
+}
+/* .blue-border {
+    border-color: white !important;
+    border-bottom: solid #1da1f2 4px !important;
+    font-weight: bold;
+} */
+
+.blue {
+    color: #0d6efd;
+}
+.search-block {
+    position: relative;
+}
+
+.search-block .fa-search {
+    position: absolute;
+    top: 12px;
+    left: 23px;
+}
+
+.wd-post-img {
+    filter: invert(100%);
+}
+
+.wd-title {
+    background-color: black;
+}

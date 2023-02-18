@@ -1,0 +1,17 @@
+export default  [
+    {   avatarIcon: 'https://1000logos.net/wp-content/uploads/2020/09/Java-Emblem.jpg',
+        userName: 'Java',
+        handle: 'Java', },
+    {   avatarIcon: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/j3dbh6kok0dket3uz2vy',
+        userName: 'Relativity Space',
+        handle: 'relativityspace', },
+    {   avatarIcon: 'https://goodlogo.com/images/logos/virgin_logo_2387.gif',
+        userName: 'Virgin Galactic',
+        handle: 'virgingalactic', },
+    {   avatarIcon: 'https://npr.brightspotcdn.com/legacy/sites/wksu/files/201512/nasa_logo.jpg',
+        userName: 'NASA',
+        handle: 'NASA', },
+    {   avatarIcon: 'https://i.pcmag.com/imagery/articles/04e4rbdlYClonRk2T3FiJXN-1..v1569492116.jpg',
+        userName: 'Tesla',
+        handle: 'Tesla', },
+];

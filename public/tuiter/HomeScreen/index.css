@@ -1,0 +1,24 @@
+.blue {
+    color: #0d6efd;
+}
+
+.wd-post-img {
+    filter: invert(100%);
+}
+
+.wd-title {
+    background-color: black;
+}
+
+.posts {
+    background-color: black;
+}
+
+.link-card {
+    background-color: black;
+}
+
+.reaction a {
+    text-decoration: none;
+    color: white;
+}
