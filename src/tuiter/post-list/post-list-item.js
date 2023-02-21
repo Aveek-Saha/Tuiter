@@ -19,11 +19,11 @@ const PostListItem = ({ post }) => {
     return (
         <>
             {!post.type && (
-                <div className="list-group-item pt-3 wd-post-list-item border border-light">
+                <div className="list-group-item pt-3">
                     {post.retweeted && (
-                        <div className="row align-items-center mb-1">
-                            <div className="col-1 px-0"></div>
-                            <div className="col-11 text-secondary">
+                        <div className="row mb-1">
+                            <div className="col-1"></div>
+                            <div className="col-11 text-muted">
                                 <FontAwesomeIcon icon={faRetweet} />
                                 <span> {post.retweeted} Retweeted</span>
                             </div>
@@ -40,7 +40,7 @@ const PostListItem = ({ post }) => {
                             />
                         </div>
                         <div className="col-11 ps-4">
-                            <div className="row align-items-center">
+                            <div className="row">
                                 <div className="col-11">
                                     <span className="fw-bolder">
                                         {post.userName}{" "}
@@ -49,7 +49,7 @@ const PostListItem = ({ post }) => {
                                         icon={faCircleCheck}
                                         className="text-primary"
                                     />
-                                    <span className="text-secondary">
+                                    <span className="text-muted">
                                         {" "}
                                         @{post.userHandle} • {post.time}
                                     </span>
@@ -57,7 +57,7 @@ const PostListItem = ({ post }) => {
                                 <div className="col-1">
                                     <FontAwesomeIcon
                                         icon={faEllipsis}
-                                        className="text-secondary float-end"
+                                        className="text-muted float-end"
                                     />
                                 </div>
                             </div>
@@ -75,44 +75,34 @@ const PostListItem = ({ post }) => {
                                     }
                                 />
                             )}
-                            <div className="row mb-2">
+                            <div className="row justify-content-around mb-2">
                                 <a
                                     href="/#"
-                                    className="col text-secondary text-decoration-none"
+                                    className="col text-muted text-decoration-none"
                                 >
-                                    <FontAwesomeIcon
-                                        icon={faComment}
-                                        className="pe-2"
-                                    />
-                                    <span>{post.reply}</span>
+                                    <FontAwesomeIcon icon={faComment} />
+                                    <span> {post.reply}</span>
                                 </a>
                                 <a
                                     href="/#"
-                                    className="col text-secondary text-decoration-none"
+                                    className="col text-muted text-decoration-none"
                                 >
-                                    <FontAwesomeIcon
-                                        icon={faRetweet}
-                                        className="pe-2"
-                                    />
-                                    <span>{post.retweet}</span>
+                                    <FontAwesomeIcon icon={faRetweet} />
+                                    <span> {post.retweet}</span>
                                 </a>
                                 <a
                                     href="/#"
-                                    className="col text-secondary text-decoration-none"
+                                    className="col text-muted text-decoration-none"
                                 >
-                                    <FontAwesomeIcon
-                                        icon={faHeart}
-                                        className="pe-2"
-                                    />
-                                    <span>{post.like}</span>
+                                    <FontAwesomeIcon icon={faHeart} />
+                                    <span> {post.like}</span>
                                 </a>
                                 <a
                                     href="/#"
-                                    className="col text-secondary text-decoration-none"
+                                    className="col text-muted text-decoration-none"
                                 >
                                     <FontAwesomeIcon
                                         icon={faArrowUpFromBracket}
-                                        className="pe-2"
                                     />
                                 </a>
                             </div>

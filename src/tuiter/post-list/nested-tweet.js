@@ -5,7 +5,7 @@ const NestedTweet = ({ post, tweet }) => {
         return (
             <img
                 src={`${post.postImage}`}
-                className="w-100 rounded-4"
+                className="w-100 rounded-3"
                 alt="Post"
             />
         );
@@ -13,13 +13,13 @@ const NestedTweet = ({ post, tweet }) => {
 
     const quoteTweet = () => {
         return (
-            <div className="px-2 pt-3">
+            <div className="p-3">
                 <div>
                     <img
                         src={`${tweet.userAvatar}`}
-                        className="rounded-circle mx-1 my-1"
-                        width="26px"
-                        height="26px"
+                        className="rounded-circle m-1"
+                        width="25px"
+                        height="25px"
                         alt="avatar"
                     />
                     <span className="fw-bold">{tweet.userName} </span>
@@ -27,7 +27,7 @@ const NestedTweet = ({ post, tweet }) => {
                         icon="fa-solid fa-circle-check"
                         className="text-primary"
                     />
-                    <span className="text-secondary">
+                    <span className="text-muted">
                         {" "}
                         @{tweet.userHandle} • {tweet.time}
                     </span>
