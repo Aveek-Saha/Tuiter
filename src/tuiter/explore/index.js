@@ -48,6 +48,7 @@ const ExploreComponent = () => {
                 <img
                     src="https://www.travelandleisure.com/thmb/LMxP8Mh5im3R7TmB1gtVZUr6bZs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/spaceship-neptune-capsule-exterior-SPACELOUNGE0422-fcc279863ded489b9475d97b1e015f9c.jpg"
                     className="w-100"
+                    alt=""
                 />
                 <h1 className="position-absolute wd-nudge-up text-white">
                     Starships taking off
