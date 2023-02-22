@@ -13,9 +13,11 @@ const ExploreComponent = () => {
                         placeholder="Search Tuiter"
                         className="form-control rounded-pill ps-5"
                     />
-                    
-                    <div className="position-absolute 
-                       wd-nudge-up">
+
+                    <div
+                        className="position-absolute 
+                       wd-nudge-up"
+                    >
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </div>
                 </div>
@@ -27,13 +29,19 @@ const ExploreComponent = () => {
             </div>
             <ul className="nav nav-pills mb-2">
                 <li className="nav-item">
-                    <a className="nav-link active">For You</a>
+                    <a href="#" className="nav-link active">
+                        For You
+                    </a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link">Trending</a>
+                    <a href="#" className="nav-link">
+                        Trending
+                    </a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link">News</a>
+                    <a href="#" className="nav-link">
+                        News
+                    </a>
                 </li>
             </ul>
             <div className="position-relative mb-2">
