@@ -1,0 +1,32 @@
+[
+    {
+        "_id": 123,
+        "avatarIcon": "https://1000logos.net/wp-content/uploads/2020/09/Java-Emblem.jpg",
+        "userName": "Java",
+        "handle": "Java"
+    },
+    {
+        "_id": 234,
+        "avatarIcon": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/j3dbh6kok0dket3uz2vy",
+        "userName": "Relativity Space",
+        "handle": "relativityspace"
+    },
+    {
+        "_id": 345,
+        "avatarIcon": "https://goodlogo.com/images/logos/virgin_logo_2387.gif",
+        "userName": "Virgin Galactic",
+        "handle": "virgingalactic"
+    },
+    {
+        "_id": 456,
+        "avatarIcon": "https://npr.brightspotcdn.com/legacy/sites/wksu/files/201512/nasa_logo.jpg",
+        "userName": "NASA",
+        "handle": "NASA"
+    },
+    {
+        "_id": 567,
+        "avatarIcon": "https://i.pcmag.com/imagery/articles/04e4rbdlYClonRk2T3FiJXN-1..v1569492116.jpg",
+        "userName": "Tesla",
+        "handle": "Tesla"
+    }
+]
