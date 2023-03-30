@@ -14,7 +14,9 @@ const NavigationSidebar = () => {
             <Link
                 to="/tuiter/home"
                 className={`list-group-item ${
-                    active === "home" ? "active" : ""
+                    active === "home" || active === "" || active === undefined
+                        ? "active"
+                        : ""
                 }`}
             >
                 Home
