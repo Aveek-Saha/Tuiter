@@ -6,6 +6,7 @@ const NavigationSidebar = () => {
     const { pathname } = useLocation();
     const paths = pathname.split("/");
     const active = paths[2];
+    console.log(active);
     return (
         <div className="list-group">
             <a href="/tuiter/home" className="list-group-item">
@@ -14,7 +15,9 @@ const NavigationSidebar = () => {
             <Link
                 to="/tuiter/home"
                 className={`list-group-item ${
-                    active === "home" ? "active" : ""
+                    active === "home" || active === "" || active == undefined
+                        ? "active"
+                        : ""
                 }`}
             >
                 Home
