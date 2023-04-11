@@ -28,7 +28,7 @@ export default function TuitStats({ post }) {
                 <span> {post.retweets}</span>
             </a>
             <a
-                // href="/#"
+                href="#"
                 className="col text-muted text-decoration-none"
                 onClick={likeTuitClickHandler}
             >

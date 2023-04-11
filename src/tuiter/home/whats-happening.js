@@ -1,4 +1,4 @@
-import React, { useState, setState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faImage,
@@ -30,6 +30,7 @@ const WhatsHappening = () => {
                 <img
                     src="https://npr.brightspotcdn.com/legacy/sites/wksu/files/201512/nasa_logo.jpg"
                     width={60}
+                    alt="profile"
                 />
             </div>
             <div className="col-10">
