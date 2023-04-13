@@ -18,7 +18,7 @@ export default function TuitStats({ post }) {
         dispatch(likeTuit(post));
     };
     return (
-        <div className="row justify-content-center mb-2 mt-2">
+        <div className="row justify-content-center mb-0 mt-2">
             <button className="btn btn-link col text-muted text-decoration-none">
                 <FontAwesomeIcon icon={faComment} />
                 <span> {post.replies}</span>
