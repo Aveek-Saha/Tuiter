@@ -38,12 +38,12 @@ const EditProfileComponent = () => {
         dispatch(updateUser(userData));
     };
 
-    const formatDateMM_dd_yyyy = (inputDate) => {
+    const formatDateMMddyyyy = (inputDate) => {
         const [year, month, date] = inputDate.split("-");
         return month + "/" + date + "/" + year;
     };
 
-    const formatDateYYYY_MM_dd = (inputDate) => {
+    const formatDateYYYYMMdd = (inputDate) => {
         return new Date(inputDate).toISOString().split("T")[0];
     };
 
@@ -59,17 +59,17 @@ const EditProfileComponent = () => {
 
     return (
         <>
-            <div className="row align-items-center justify-content-start pb-1">
+            <div className="row align-items-center justify-content-start mb-2 mt-1">
                 <div className="col-auto">
                     <Link to="/tuiter/profile" className="btn" title="cancel">
                         <FontAwesomeIcon icon={faX} />
                     </Link>
                 </div>
                 <div className="col-10">
-                    <span className="fs-5 fw-bold">Edit Profile</span>
+                    <span className="fs-4 fw-bold">Edit Profile</span>
                     <Link
                         to="/tuiter/profile"
-                        className="btn btn-dark btn-sm rounded-pill position-relative float-end px-3 fw-bold"
+                        className="btn btn-outline-dark rounded-pill float-end"
                         onClick={saveClickHandler}
                     >
                         Save
@@ -102,42 +102,36 @@ const EditProfileComponent = () => {
             </div>
 
             <div className="px-3">
-                    <label className="wd-input-label text-secondary">
-                        Name
-                    </label>
-                    <input
-                        type="text"
-                        className="form-control mb-3"
-                        defaultValue={userName}
-                        onChange={(event) => setUserName(event.target.value)}
-                    />
-                    <label className="wd-input-label text-secondary">Bio</label>
-                    <textarea
-                        rows={3}
-                        className="form-control mb-3"
-                        value={bio}
-                        onChange={(event) => setBio(event.target.value)}
-                    />
-                    <label className="wd-input-label text-secondary">
-                        Location
-                    </label>
-                    <input
-                        type="text"
-                        className="form-control mb-3"
-                        defaultValue={location}
-                        onChange={(event) => setLocation(event.target.value)}
-                    />
-                    <label className="wd-input-label text-secondary">
-                        Website
-                    </label>
-                    <input
-                        type="text"
-                        className="form-control mb-3"
-                        defaultValue={website}
-                        onChange={(event) => setWebsite(event.target.value)}
-                    />
+                <label className="wd-input-label text-muted">Name</label>
+                <input
+                    type="text"
+                    className="form-control mb-3"
+                    defaultValue={userName}
+                    onChange={(event) => setUserName(event.target.value)}
+                />
+                <label className="wd-input-label text-muted">Bio</label>
+                <textarea
+                    rows={3}
+                    className="form-control mb-3"
+                    value={bio}
+                    onChange={(event) => setBio(event.target.value)}
+                />
+                <label className="wd-input-label text-muted">Location</label>
+                <input
+                    type="text"
+                    className="form-control mb-3"
+                    defaultValue={location}
+                    onChange={(event) => setLocation(event.target.value)}
+                />
+                <label className="wd-input-label text-muted">Website</label>
+                <input
+                    type="text"
+                    className="form-control mb-3"
+                    defaultValue={website}
+                    onChange={(event) => setWebsite(event.target.value)}
+                />
                 <div className="mt-4">
-                    <div className="text-secondary">
+                    <div className="text-muted">
                         Birth Date .
                         {edit && (
                             <button
@@ -165,18 +159,16 @@ const EditProfileComponent = () => {
                         <input
                             type="date"
                             className="form-control"
-                            defaultValue={formatDateYYYY_MM_dd(dateOfBirth)}
+                            defaultValue={formatDateYYYYMMdd(dateOfBirth)}
                             onChange={(event) =>
                                 setDateOfBirth(
-                                    formatDateMM_dd_yyyy(event.target.value)
+                                    formatDateMMddyyyy(event.target.value)
                                 )
                             }
                         />
                     )}
                 </div>
-                <div className="fw-bold mt-4">
-                    Switch to professional
-                </div>
+                <div className="fw-bold mt-4">Switch to professional</div>
             </div>
         </>
     );
