@@ -7,10 +7,13 @@ import {
 import {
     faComment,
     faHeart as faHeartReg,
+    faThumbsDown
 } from "@fortawesome/free-regular-svg-icons";
 
 import { useDispatch } from "react-redux";
 import { likeTuit } from "./tuits-reducer";
+
+import { updateTuitThunk } from "../../services/tuits-thunks";
 
 export default function TuitStats({ post }) {
     const dispatch = useDispatch();
@@ -28,7 +31,14 @@ export default function TuitStats({ post }) {
                 <span> {post.retweets}</span>
             </button>
             <button
-                onClick={likeTuitClickHandler}
+                onClick={() =>
+                    dispatch(
+                        updateTuitThunk({
+                            ...post,
+                            likes: post.likes + 1,
+                        })
+                    )
+                }
                 className="btn btn-link col text-muted text-decoration-none"
             >
                 {!post.liked && <FontAwesomeIcon icon={faHeartReg} />}

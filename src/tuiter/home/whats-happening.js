@@ -10,7 +10,7 @@ import {
     faChartSimple,
     faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-import { createTuit } from "../tuits/tuits-reducer";
+import { createTuitThunk } from "../../services/tuits-thunks";
 import { useDispatch } from "react-redux";
 
 const WhatsHappening = () => {
@@ -20,7 +20,7 @@ const WhatsHappening = () => {
         const newTuit = {
             tweet: whatsHappening,
         };
-        dispatch(createTuit(newTuit));
+        dispatch(createTuitThunk(newTuit));
         setWhatsHappening("");
     };
 
