@@ -11,15 +11,11 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 
 import { useDispatch } from "react-redux";
-import { likeTuit } from "./tuits-reducer";
 
 import { updateTuitThunk } from "../../services/tuits-thunks";
 
 export default function TuitStats({ post }) {
     const dispatch = useDispatch();
-    const likeTuitClickHandler = () => {
-        dispatch(likeTuit(post));
-    };
     return (
         <div className="row justify-content-center mb-0 mt-2">
             <button className="btn btn-link col text-muted text-decoration-none">
@@ -49,6 +45,20 @@ export default function TuitStats({ post }) {
                     />
                 )}
                 <span> {post.likes}</span>
+            </button>
+            <button
+                onClick={() =>
+                    dispatch(
+                        updateTuitThunk({
+                            ...post,
+                            dislikes: post.dislikes + 1,
+                        })
+                    )
+                }
+                className="btn btn-link col text-muted text-decoration-none"
+            >
+                <FontAwesomeIcon icon={faThumbsDown} />
+                <span> {post.dislikes}</span>
             </button>
             <button className="btn btn-link col text-muted text-decoration-none">
                 <FontAwesomeIcon icon={faArrowUpFromBracket} />
