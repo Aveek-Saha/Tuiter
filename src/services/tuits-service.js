@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const API_BASE = process.env.REACT_APP_API_BASE;
+const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000/api";
 const TUITS_API = `${API_BASE}/tuits`;
 
 export const createTuit = async (tuit) => {
@@ -20,6 +19,6 @@ export const deleteTuit = async (tid) => {
 };
 
 export const updateTuit = async (tuit) => {
-    const response = await axios.put(`${TUITS_API}/${tuit._id}`, tuit);
-    return response;
+    await axios.put(`${TUITS_API}/${tuit._id}`, tuit);
+    return tuit;
 };

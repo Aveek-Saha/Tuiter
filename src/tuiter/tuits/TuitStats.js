@@ -7,7 +7,7 @@ import {
 import {
     faComment,
     faHeart as faHeartReg,
-    faThumbsDown
+    faThumbsDown,
 } from "@fortawesome/free-regular-svg-icons";
 
 import { useDispatch } from "react-redux";
@@ -32,6 +32,7 @@ export default function TuitStats({ post }) {
                         updateTuitThunk({
                             ...post,
                             likes: post.likes + 1,
+                            liked: true,
                         })
                     )
                 }
