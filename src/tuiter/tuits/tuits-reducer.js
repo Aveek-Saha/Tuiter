@@ -13,19 +13,6 @@ const initialState = {
     loading: false,
 };
 
-const currentUser = {
-    userName: "NASA",
-    userHandle: "nasa",
-    userAvatar:
-        "https://npr.brightspotcdn.com/legacy/sites/wksu/files/201512/nasa_logo.jpg",
-};
-
-const templateTuit = {
-    ...currentUser,
-    topic: "Space",
-    time: "2h",
-};
-
 const tuitsSlice = createSlice({
     name: "tuits",
     initialState,
@@ -51,7 +38,6 @@ const tuitsSlice = createSlice({
 
             state.tuits.push({
                 ...payload,
-                ...templateTuit,
             });
         },
         [updateTuitThunk.fulfilled]: (state, { payload }) => {
