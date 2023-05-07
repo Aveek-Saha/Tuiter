@@ -3,6 +3,7 @@ import {
     faRetweet,
     faArrowUpFromBracket,
     faHeart as faHeartSolid,
+    faThumbsDown as faThumbsSolid
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faComment,
@@ -27,15 +28,18 @@ export default function TuitStats({ post }) {
                 <span> {post.retweets}</span>
             </button>
             <button
-                onClick={() =>
+                onClick={() => {
+                    let new_likes = post.likes;
+                    if (!post.liked) new_likes += 1;
+                    else new_likes -= 1;
                     dispatch(
                         updateTuitThunk({
                             ...post,
-                            likes: post.likes + 1,
-                            liked: true,
+                            likes: new_likes,
+                            liked: !post.liked,
                         })
-                    )
-                }
+                    );
+                }}
                 className="btn btn-link col text-muted text-decoration-none"
             >
                 {!post.liked && <FontAwesomeIcon icon={faHeartReg} />}
@@ -48,17 +52,28 @@ export default function TuitStats({ post }) {
                 <span> {post.likes}</span>
             </button>
             <button
-                onClick={() =>
+                onClick={() => {
+                    let new_dislikes = post.dislikes;
+                    if (!post.disliked) new_dislikes += 1;
+                    else new_dislikes -= 1;
                     dispatch(
                         updateTuitThunk({
                             ...post,
-                            dislikes: post.dislikes + 1,
+                            dislikes: new_dislikes,
+                            disliked: !post.disliked,
                         })
-                    )
-                }
+                    );
+                }}
                 className="btn btn-link col text-muted text-decoration-none"
             >
-                <FontAwesomeIcon icon={faThumbsDown} />
+            {!post.disliked && 
+                <FontAwesomeIcon icon={faThumbsDown} />}
+            {post.disliked && (
+                <FontAwesomeIcon
+                    icon={faThumbsSolid}
+                    style={{ color: "red" }}
+                />
+            )}
                 <span> {post.dislikes}</span>
             </button>
             <button className="btn btn-link col text-muted text-decoration-none">
